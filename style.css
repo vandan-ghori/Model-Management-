@@ -1,0 +1,864 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy';
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-top: .1px;
+}
+
+#nav{
+    width: 100%;
+    height: 5vw;
+    /* background-color: pink; */
+    margin-top: 3vw;
+    border-top: .2vw solid #000;
+    border-bottom: .2vw solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h1{
+    font-family: monument;  
+    font-size: 2.5vw;
+    /* font-weight:800; */
+    letter-spacing: -.15vw;
+    height: 100%;
+    width: 22%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav h1::after{
+    content: "©";
+    font-family: gilroy;
+    font-size: 1.2vw;
+    font-weight: 100;
+    position: absolute;
+    top: 8%;
+    left: 17.5%;
+}
+
+#nav h1::before{
+    content: "model management";
+    font-family: 'gilroy';
+    color: #333;
+    font-size: 1vw;
+    letter-spacing: .01vw;
+    font-weight: 100;
+    position: absolute;
+    top: 12.45%;
+    left: 9.35%;
+}
+
+#nav h2{
+    font-size: 1.4vw;
+    font-weight: 600;
+    height: 100%;
+    width: 22%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: .2vw solid #000;
+}
+
+#nav h2:hover{
+    font-size: 1.8vw;
+}
+
+#nav h2:nth-last-child(1){
+    width: 9%;
+    border-right: 0vw;
+}
+
+#nav h2:nth-last-child(2){
+    width: 25%;
+}
+
+#center{
+    height: 90%;
+    width: 100%;
+    /* background-color: red; */
+    padding: 4vw;
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* background-color:blueviolet; */
+}
+
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: red; */
+    padding: 3.5vw;
+    color: #fff;
+}
+
+#overlay1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* mix-blend-mode: difference; */
+}
+
+#overlay1 h1{
+    font-family: monument;
+    font-size: 2.5vw;
+    font-weight: 450;
+    margin-bottom: 2vw;
+    mix-blend-mode: di;
+}
+
+#overlay1 h2{
+    font-size: 1.5vw;
+    padding: 1.5vw ;
+    /* background-color: aqua; */
+    border-radius: 50%;
+    border: .12vw solid #fff;
+}
+
+#overlay2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: .2vw solid ; 
+    padding: 1vw 0;
+    /* mix-blend-mode: difference; */
+}
+
+#overlay2 h4{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+
+#overlay2 h4:hover{
+    font-size: 1.8vw;
+    font-weight: 550;
+}
+
+#overlay2 img{
+    height: 3vw;
+    /* padding-right: .6vw; */
+    margin-right: .6vw;
+}
+
+#overlay2 img:hover{
+    height: 4vw;
+}
+
+#scroll{
+    height: 20vw;
+    width: 100%;
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container{
+    height: 100%;
+    width: 185%;
+     /* background-color: red;  */
+    display: inline-block;
+    padding-bottom: 2.5vw;
+    padding-top: 0;
+    animation: anime;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll img{
+    /* display: none; */
+    height: 100%;
+    width: 9.35%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 45% 5%;
+    margin: 1.5vw;
+}
+
+@keyframes anime{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#scroll img:hover{
+    border: 5px solid #666;
+}
+
+#alphabate{
+    height: 5vw;
+    width: 100%;
+    margin-top: 3vw;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    border-top: .2vw solid #000;
+    border-bottom: .2vw solid #000;
+}
+
+#alphabate h5{
+    font-size: 1.7vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: underline;
+    padding-right: 2.2vw;
+}
+
+#alphabate h6{
+    font-size: 1.2vw;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: .5vw .4vw;
+    border-radius: 50%;
+    cursor: pointer;
+    border: .1vw solid #00000000;
+    transition: all ease .5s;
+}
+
+#alphabate h6:hover{
+    border: .1vw solid #000;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
+    padding: 2.5vw 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page2-1{
+    height: 100%;
+    width: 55%;
+}
+
+#page2-1 img{
+    height: 90%;
+    object-fit:cover;
+    width: 90%;
+}
+
+#page2-1 h1{
+    font-size: 3.5vw;
+    font-family: monument;
+    padding-top: 1vw;
+}
+
+#page2-2{
+    height: 100%;
+    width: 45%;
+}
+
+#page2-2 img{
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+}
+
+#text{
+    height: 40%;
+    width: 100%;
+    padding-top: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#text h4{
+    height: 100%;
+    width: 50%;
+    font-size: 2.1vw;
+    font-weight: 600;
+}
+
+#text h5{
+    height: 100%;
+    width: 42%;
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    /* padding: 2.5vw 5vw; */
+}
+
+#p3-top{
+    padding: 2.5vw 5vw;
+    height: 87.5%;
+    width: 100%;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 5vw;
+}
+
+#p3-left{
+    height: 100%;
+    width: 40%;
+    /* background-color: purple; */
+    padding: 3.5vw 3vw;
+}
+
+#p3-left img{
+    height: 25.4vw;
+    width: 25.2vw;
+    /* background-color:aquamarine; */
+    margin: 4vw 2vw;
+    margin-top: 2vw;
+}
+
+#p3-left h4{
+    width: 65%;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 1.2vw;
+}
+
+#p3-right{
+    height: 100%;
+    width: 60%;
+    /* background-color: brown; */
+    /* padding: 4vw; */
+}
+
+#p3-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#p3-bottom{
+    height: 70%;
+    width: 100%;
+    padding: 2.5vw 5vw;
+    /* background-color: red; */
+}
+
+#p3-bottom img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#bottom{
+    height: 100%;
+    width: 100%;
+    margin-top: 7vw;
+    padding: 0vw 5vw;
+    /* padding: 2.5vw 5vw; */
+}
+
+#bottom>h1{
+    text-align: center;
+    font-family: monument;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-bottom: 5vw;
+}
+
+.elem{
+    height: 9vw;
+    width: 100%;
+    /* background-color: cadetblue; */
+    border-top: .2vw solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw ;
+    position: relative;
+}
+
+.elem:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.elem:nth-last-child(1){
+    border-bottom: .2vw solid #000;;
+}
+
+.elem h4{
+    text-transform: uppercase;
+    height: fit-content;
+    width: 5vw;
+    font-size: 1.18vw;
+}
+
+.elem h4:hover{
+    font-size: 2vw;
+}
+
+.elem img{
+    width: 8.8vw;
+    height: 8.7vw;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0;
+}
+
+.speci h1{
+    font-size:2.5vw;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.elem:hover h1{
+    opacity: 1;
+}
+
+.speci h5{
+    font-size: 1.1vw;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.elem:hover h5{
+    opacity: 1;
+}
+
+.elem:hover img{
+    opacity: 1;
+    border-radius: 50%;
+    transition: all ease 1.25s;
+}
+
+.elem1{
+    width: 45%;
+}
+
+.elem1 h1{
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.elem1 h1:hover{
+    font-size: 3.5vw;
+}
+
+.elem1 h5{
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.elem1 h5:hover{
+    font-size: 1.25vw;
+}
+
+#male{
+    height: 100%;
+    width: 100%;
+    padding: 2.5vw 5vw;
+    /* background-color: #000; */
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#male-left{
+    height: 100%;
+    width: 50%;
+    background-color: aliceblue;
+}
+
+#male-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#male-right{
+    height: 100%;
+    width: 45%;
+    /* background-color: aliceblue; */
+}
+
+#male-right h1{
+    font-size: 3.5vw;
+    font-family: monument;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#male-right h3{
+    width: 60%;
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding-top: 1.2vw;
+}
+
+#male-right h6{
+    width: 95%;
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding-top: 1.2vw;
+    color: rgb(98, 99, 99);
+}
+
+.male{
+    width: 100%;
+    height: 62.5%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding-top: 3.5vw;
+}
+
+.male img{
+    width: 47.5%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#male1{
+    height: 60%;
+    width: 100%;
+    padding: 2.5vw 5vw;
+}
+
+#male1 img{
+    margin-top: 3vw;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 20%;
+}
+
+#female{
+    height: 100%;
+    width: 100%;
+    padding: 2.5vw 5vw;
+    /* background-color: #000; */
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: 6.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#female-left{
+    height: 100%;
+    width: 55%;
+    background-color: aliceblue;
+}
+
+#female-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#female-right{
+    height: 100%;
+    width: 40%;
+    /* background-color: aliceblue; */
+}
+
+#female-right img{
+    height: 65%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#female1{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2vw;
+}
+
+#female1 h4{
+    height: 100%;
+    width: 35%;
+    font-size: 1.5vw;
+}
+
+#female1 h5{
+    height: 100%;
+    width: 40%;
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: .955vw;
+}
+
+#scrol{
+    height: 6.5vw;
+    width: 100%;
+    /* background-color: aqua; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding: 1vw;
+    border-top: .2vw solid #000;
+    border-bottom: .2vw solid #000;
+}
+
+#scrol h1{
+    font-size: 4vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-text-stroke: 2px #000;
+    color: transparent;
+    font-family: monument;
+    letter-spacing: .25vw;
+    margin-right: 1.2vw;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 4px - 1.2vw));
+    }
+}
+
+#sec-last{
+    width: 100%;
+    height: 50%;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+    margin-top: 5vw;
+}
+
+#r{
+    height: 100%;
+    width: 20%;
+}
+
+#r h1{
+    font-family: monument;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+#m{
+    height: 100%;
+    width: 32.5%;
+}
+
+#m h3{
+    font-size: 1.7vw;
+    font-weight: 500;
+    line-height: 1.6vw;
+}
+
+#m img{
+    padding-top: 2vw;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#l{
+    height: 100%;
+    width: 32.5%;
+}
+
+#l h3{
+    font-size: 1.7vw;
+    font-weight: 500;
+    line-height: 1.6vw;
+}
+
+#l img{
+    padding-top: 2vw;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#last{
+    width: 100%;
+    height: 35%;
+    /* background-color: pink; */
+    margin-top: 3vw;
+    border-top: .2vw solid #000;
+    border-bottom: .2vw solid #000;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+#lastr{
+    height: 100%;
+    width: 30%;
+    padding: 2vw;
+}
+
+#lastr h1{
+    font-family: monument;  
+    font-size: 2.5vw;
+    letter-spacing: -.15vw;
+}
+
+#lastr h1::after{
+    content: "©";
+    font-family: gilroy;
+    font-size: 1.2vw;
+    font-weight: 100;
+    position: absolute;
+    /* top: %; */
+    left: 14.85%;
+}
+
+#lastr h1::before{
+    content: "model management";
+    font-family: 'gilroy';
+    color: #333;
+    font-size: 1vw;
+    letter-spacing: .01vw;
+    font-weight: 100;
+    position: absolute;
+    bottom: -809.45%;
+    left: 6.75%;
+}
+
+#lastm{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lastm h2{
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding: 2vw;
+}
+
+#lastm h2:hover{
+    font-size: 1.8vw;
+}
+
+.m1{
+    border-right: .2vw solid #000;
+    width: 80%;
+    padding-left: 2vw;
+}
+
+.m2{
+    border-right: .2vw solid #000;
+    width: 100%;
+    padding-left: 1.5vw;
+}
+
+#lastl{
+    height: 100%;
+    width: 40%;
+}
+
+#lastl .lastl-t{
+    height: 33.5%;
+    width: 100%;
+    border-bottom: .2vw solid #000;
+    margin-bottom: 1vw;
+    align-content: center;
+}
+
+.lastl-t h2{
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding-left: 2vw;
+}
+
+.lastl-t h2:hover{
+    font-size: 1.8vw;
+}
+
+#lastl .lastl-m{
+    height: 10%;
+    margin-left: 2vw;
+    width: 30%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5vw;
+    margin-bottom: .8vw;
+}
+
+.lastl-m h4{
+    font-weight: 500;
+}
+
+.lastl-m h4:hover{
+    font-size: 1.6vw;
+}
+
+#lastl .lastl-b{
+    height: 40%;
+    margin-left: 2vw;
+    width: 60%;
+    align-content: center;
+}
+
+.lastl-b h5{
+    font-weight: 500;
+    line-height: 1vw;
+}
+
+#fotter{
+    height: 5%;
+}
